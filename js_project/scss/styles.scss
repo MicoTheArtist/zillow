@@ -1,4 +1,4 @@
-body {
+body * >  {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
@@ -7,11 +7,38 @@ body {
 body {
 	width:100%;
 	background-color: skyblue;
+	margin:0; margin: none;
+	padding:0; padding: none;
+	font-family: arial;
 }
 
-textarea {	
-	font-size: 14px;
-	border:6px solid black;
-	border-radius: 8px;
-	width:220px;
+
+header {
+	display: flex;
+	flex-flow:row wrap;
+	justify-content: center;
+
+	h1 {
+		font-weight: bold;
+		font-size: 3em;
+		text-align: center;
+		margin-bottom:5px;
+		span {
+			font-weight: normal;
+			font-size: 2rem;
+		}
+	}
+}
+article {
+	display:flex;
+	flex-flow: row wrap;
+	justify-content: center;
+
+	textarea {
+		font-size: 14px;
+		border:6px solid black;
+		border-radius: 8px;
+		width:240px;
+		margin-top: 5%;
+	}
 }
