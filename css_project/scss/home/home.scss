@@ -1,0 +1,41 @@
+body {
+	background-color: lightgrey;
+}
+
+p {
+	margin: 0;
+	padding: 0;
+}
+
+main#home > * {
+	display: flex;
+	flex-flow: row wrap;
+	font-weight: bold;
+	background-color: skyblue;
+}
+
+main#home {
+	header {
+		background-color: tan;
+		justify-content: center;
+
+		h1 {}
+	}
+	article {
+		justify-content: space-between;
+		p { 
+			border:1px solid black;
+			text-align: center;
+			min-height: 300px;			
+		}
+		p.one {
+			width:180px;			
+		}
+		p.two {
+			flex:3;
+		}
+		p.three {
+			width: 200px;
+		}
+	}
+}

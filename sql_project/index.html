@@ -1,0 +1,59 @@
+SQL Version
+
+select TOP 1 (id)
+from posts
+where user_id  = 2
+order by date_modified desc;
+
+
+MySQL Version - (I Know mySQL the best)
+
+select id
+from posts 
+where user_id = 2 
+order by date_modified desc limit 1;
+
+
+
+
+NOTE: Description of MySQL solution is below.
+NOTE: I recreated the tables given information using MySQL.
+  	   My Computer is not set-up for Microsoft SQL.
+
+mysql> describe posts;
++---------------+------------------+------+-----+---------+----------------+
+| Field         | Type             | Null | Key | Default | Extra          |
++---------------+------------------+------+-----+---------+----------------+
+| id            | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+| user_id       | int(11)          | NO   |     | NULL    |                |
+| date_posted   | datetime         | NO   |     | NULL    |                |
+| date_modified | datetime         | NO   |     | NULL    |                |
+| content       | text             | NO   |     | NULL    |                |
++---------------+------------------+------+-----+---------+----------------+
+5 rows in set (0.01 sec)
+
+
+mysql> select * from posts;
++----+---------+---------------------+---------------------+--------------------------------+
+| id | user_id | date_posted         | date_modified       | content                        |
++----+---------+---------------------+---------------------+--------------------------------+
+|  1 |       2 | 2011-03-12 00:00:00 | 2014-08-31 11:36:04 | testing 123 content is in here |
+|  2 |       2 | 2011-04-12 00:00:00 | 2014-08-31 11:41:16 | second content for user_id 2   |
+|  3 |       2 | 2011-05-12 00:00:00 | 2014-08-31 11:41:50 | third content for user_id 3    |
++----+---------+---------------------+---------------------+--------------------------------+
+
+
+mysql> select id 
+    -> from posts
+    -> where user_id = 2
+    -> order by date_modified desc limit 1;
+
++----+
+| id |
++----+
+|  3 |
++----+
+1 row in set (0.00 sec);
+
+
+

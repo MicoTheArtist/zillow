@@ -1,0 +1,17 @@
+body {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+}
+
+body {
+	width:100%;
+	background-color: skyblue;
+}
+
+textarea {	
+	font-size: 14px;
+	border:6px solid black;
+	border-radius: 8px;
+	width:220px;
+}

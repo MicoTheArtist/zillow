@@ -1,0 +1,22 @@
+body {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+body {
+  width: 100%;
+  background-color: skyblue; }
+
+textarea {
+  font-size: 14px;
+  border: 6px solid black;
+  border-radius: 8px;
+  width: 220px; }
